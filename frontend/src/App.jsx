@@ -1,10 +1,22 @@
 import "./App.css";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="bg-red-500 text-white">
-      <h1>Hello, Tailwind!</h1>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="flex">
+        <Sidebar />
+        <div className="flex-1">
+          <Header />
+          <Dashboard />
+        </div>
+      </div>
+    </QueryClientProvider>
   );
 }
 
