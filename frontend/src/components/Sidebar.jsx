@@ -1,19 +1,22 @@
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   return (
-    <aside className="w-64 h-screen bg-gray-800 text-white p-4">
+    <div className="w-64 bg-gray-900 text-white h-full p-4">
+      <h2 className="text-xl font-bold mb-6">Menu</h2>
       <ul>
-        <li className="mb-2">
-          <a href="/" className="block-p-2">
-            Dashboard
-          </a>
+        <li className="mb-4">
+          <Link to="/reviews" className="hover:text-gray-400">
+            📄 Reviews
+          </Link>
         </li>
-        <li className="mb-2">
-          <a href="/settings" className="block-p-2">
-            Settings
-          </a>
+        <li>
+          <Link to="/analysis" className="hover:text-gray-400">
+            📊 Analysis
+          </Link>
         </li>
       </ul>
-    </aside>
+    </div>
   );
 };
 
