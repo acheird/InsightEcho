@@ -1,22 +1,25 @@
-import "./App.css";
-import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
+import ReviewForm from "./components/ReviewForm";
+import Analysis from "./components/Analysis";
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="flex">
+    <Router>
+      <div className="flex h-screen">
+        {/* Sidebar on the left */}
         <Sidebar />
-        <div className="flex-1">
-          <Header />
-          <Dashboard />
+
+        {/* Main content area on the right */}
+        <div className="flex-1 p-6">
+          <Routes>
+            <Route path="/" element={<ReviewForm />} />
+            <Route path="/reviews" element={<ReviewForm />} />
+            <Route path="/analysis" element={<Analysis />} />
+          </Routes>
         </div>
       </div>
-    </QueryClientProvider>
+    </Router>
   );
 }
 
