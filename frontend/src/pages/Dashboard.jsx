@@ -1,15 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-
-const fetchData = async () => {
-  const { data } = await axios.get("http://localhost:5000/api/data");
-  return data;
-};
+import { fetchDashboardData } from "../api/api";
 
 const Dashboard = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ["dashboardData"],
-    queryFn: fetchData,
+    queryFn: fetchDashboardData,
   });
 
   if (isLoading) return <p>Loading...</p>;
