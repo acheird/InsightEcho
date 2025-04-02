@@ -24,7 +24,7 @@ const Analysis = () => {
   if (!data) return <p>No data available</p>;
 
   return (
-    <div className="bg-black shadow-lg rounded-lg p-6 w-1/2">
+    <div className="bg-white text-black shadow-lg rounded-lg p-6 w-1/2">
       <h2 className="text-lg font-bold mb-4">Sentiment Analysis Results</h2>
       <p>Total Reviews: {data.totalReviews}</p>
       <p>Average Sentiment: {data.averageSentiment.toFixed(2)}</p>

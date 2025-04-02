@@ -23,18 +23,18 @@ const ReviewForm = ({ onReviewSubmitted }) => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 w-1/2">
+    <div className="flex bg-white shadow-lg rounded-lg p-6 w-1/2">
       <h2 className="text-lg text-black font-bold mb-4">Submit a Review</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <textarea
-          className="w-full p-2 border rounded"
+          className="bg-white w-full text-black p-2 border rounded"
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Enter your review..."
           required
         />
         <select
-          className="w-full p-2 border rounded"
+          className="w-full bg-white text-black p-2 border rounded"
           value={rating}
           onChange={(e) => setRating(Number(e.target.value))}
         >
