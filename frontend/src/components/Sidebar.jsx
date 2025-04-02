@@ -7,12 +7,12 @@ const Sidebar = () => {
       <ul>
         <li className="mb-4">
           <Link to="/reviews" className="hover:text-gray-400">
-            📄 Reviews
+            Reviews
           </Link>
         </li>
         <li>
           <Link to="/analysis" className="hover:text-gray-400">
-            📊 Analysis
+            Analysis
           </Link>
         </li>
       </ul>
