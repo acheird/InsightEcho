@@ -24,7 +24,7 @@ const ReviewForm = ({ onReviewSubmitted }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 w-1/2">
-      <h2 className="text-lg font-bold mb-4">Submit a Review</h2>
+      <h2 className="text-lg text-black font-bold mb-4">Submit a Review</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <textarea
           className="w-full p-2 border rounded"
