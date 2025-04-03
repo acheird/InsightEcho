@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import ReviewForm from "./components/ReviewForm";
+import Reviews from "./pages/Reviews";
 import Analysis from "./components/Analysis";
 import Header from "./components/Header";
 
@@ -15,8 +15,8 @@ function App() {
         <div className="flex-1 p-6">
           <Header />
           <Routes>
-            <Route path="/" element={<ReviewForm />} />
-            <Route path="/reviews" element={<ReviewForm />} />
+            <Route path="/" element={<Reviews />} />
+            <Route path="/reviews" element={<Reviews />} />
             <Route path="/analysis" element={<Analysis />} />
           </Routes>
         </div>
