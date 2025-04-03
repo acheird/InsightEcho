@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { submitReview } from "../api/api";
+import { submitReview } from "../api";
 
 const ReviewForm = ({ onReviewSubmitted }) => {
   const [text, setText] = useState("");

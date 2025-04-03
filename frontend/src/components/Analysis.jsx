@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchAnalysis } from "../api/api";
+import { fetchAnalysis } from "../api";
 
 const Analysis = () => {
   const [data, setData] = useState(null);
@@ -8,7 +8,7 @@ const Analysis = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const analysisData = await fetchAnalysis();
+        const { data: analysisData } = await fetchAnalysis();
         setData(analysisData);
       } catch (error) {
         console.error("Failed to fetch analysis", error);
