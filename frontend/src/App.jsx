@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Reviews from "./pages/Reviews";
 import Analysis from "./components/Analysis";
 import Header from "./components/Header";
+import UploadPage from "./pages/UploadPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Reviews />} />
             <Route path="/reviews" element={<Reviews />} />
+            <Route path="/upload" element={<UploadPage />} />
             <Route path="/analysis" element={<Analysis />} />
           </Routes>
         </div>
