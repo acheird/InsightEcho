@@ -14,7 +14,9 @@ const ReviewForm = ({ onReviewSubmitted }) => {
       await submitReview({ text, rating });
       setText(""); // Reset form
       setRating(3);
-      onReviewSubmitted(); // Refresh analysis
+      if (onReviewSubmitted) {
+        onReviewSubmitted();
+      }
     } catch (error) {
       console.error("Submission failed", error);
     } finally {
