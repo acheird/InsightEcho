@@ -11,17 +11,3 @@ export const fetchAnalysis = async () => {
 export const submitReview = async (review) => {
   return axios.post(`${API_BASE_URL}/reviews`, review);
 };
-
-export const uploadCSV = async (formData) => {
-  const response = await axios.post(
-    `${API_BASE_URL}/reviews/upload`,
-    formData,
-    {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }
-  );
-
-  return response.data;
-};

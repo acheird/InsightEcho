@@ -15,11 +15,6 @@ const Sidebar = () => {
             Analysis
           </Link>
         </li>
-        <li>
-          <Link to="/upload" className="hover:text-gray-400">
-            Upload
-          </Link>
-        </li>
       </ul>
     </div>
   );
